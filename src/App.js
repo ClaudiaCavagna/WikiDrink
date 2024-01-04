@@ -5,12 +5,23 @@ import AboutScreen from "./screen/AboutScreen";
 import ContactScreen from "./screen/ContactScreen";
 import SingleCocktailScreen from "./screen/SingleCocktailScreen";
 import ErrorScreen from "./screen/ErrorScreen";
+import { useGlobalContext } from "./context";
 
 function App() {
+
   return (
-    <div className="App">
-      App
-    </div>
+    <Router>
+      <Navbar />
+      <Sidebar />
+      <Routes>
+        <Route path='/' element={<HomeScreen />} />
+        <Route path='/about' element={<AboutScreen />} />
+        <Route path='/contacts' element={<ContactScreen />} />
+        <Route path='/cocktail/:id' element={<SingleCocktailScreen />} />
+        <Route path='*' element={<ErrorScreen />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
