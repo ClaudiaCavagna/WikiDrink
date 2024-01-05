@@ -13,12 +13,12 @@ const links = [
   },
   {
     url: "/about",
-    text: "Chi Siamo",
+    text: "About",
     icon: <RiTeamFill className="nav-icon" />,
   },
   {
-    url: "/contattaci",
-    text: "contattaci",
+    url: "/contacts",
+    text: "contacts",
     icon: <AiFillMessage className="nav-icon" />,
   },
 ];

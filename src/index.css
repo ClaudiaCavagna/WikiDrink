@@ -44,6 +44,7 @@ body {
   background-color: white;
   color: var(--dark-text-color);
   font-family: "Open Sans", sans-serif;
+  letter-spacing: var(--letter-spacing);
 }
 
 code {
@@ -58,6 +59,17 @@ ul {
 a {
   text-decoration: none;
   color: unset;
+}
+
+.topline, .underline {
+  background-color: var(--flickr-pink);
+  height: 2px;
+  width: 80%;
+  margin-block: 1rem;
+}
+
+.underline {
+  transform: translateX(25%);
 }
 
 /* NAV STYLE */
@@ -112,7 +124,10 @@ a {
 
   .nav-text {
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    margin-top: 7px;
+    color: var(--dark-text-color);
+    font-weight: 600;
   }
 
   .nav-links {
@@ -187,11 +202,14 @@ a {
 
 .nav-link:hover {
   color: var(--flickr-pink);
+  transform: scale(103%);
 }
 
-.nav-text {
+.sidebar-links .nav-text {
   margin-top: 6px;
   font-size: 1rem;
+   color: var(--dark-text-color);
+  font-weight: 600; 
 }
 
 .nav-icon {
@@ -225,4 +243,87 @@ a {
 
 .footer-container span {
   color: var(--flickr-pink);
+}
+
+/* HERO STYLE */
+
+.hero-img-container {
+  position: relative;
+  background-position: top;
+  background-size: contain;
+  min-height: 96vh;
+  width: 100%;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+.hero-container {
+  height: 100%;
+}
+
+/* ABOUT HERO */
+.about-hero {
+  display: grid;
+  height: 100%;
+  place-items: center;
+}
+
+.about-text {
+  position: relative;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 45ch;
+  color: var(--light-gray);
+}
+
+.about-text h3 {
+  line-height: 1.4;
+  font-style: italic;
+}
+
+@media screen and (min-width: 992px) {
+  .about-text {max-width: 65ch;}
+}
+
+/* ABOUTSCREEN STYLE */
+
+.about-value {
+  margin: 0 auto;
+  background-color: var(--extra-light-gray);
+}
+
+.about-value-content {
+  padding: 3rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.about-title {
+  text-align: center;
+  font-weight: bold;
+  color: var(--trypan-blue-2);
+}
+
+.card-section {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .card-section {
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: unset;
+  }
 }
