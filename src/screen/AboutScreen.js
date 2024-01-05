@@ -30,7 +30,7 @@ const AboutScreen = () => {
           </div>
         </div>
       </section>
-      <section className='about-team'>
+      <section className='about-team mb-5'>
         <div className='img-team' style={{
           background: `url(${teamImg})`,
           backgroundPosition: 'center',

@@ -42,7 +42,7 @@ const Wrapper = styled.article`
     background-color: var(--trypan-blue-2);
     .card-title {
       color: white;
-      font-size: 0.5rem;
+      font-size: 1.2rem;
     }
     .card-text p {
       color: var(--extra-light-gray);
@@ -53,8 +53,8 @@ const Wrapper = styled.article`
     place-items: center;
     text-align: center;
  
-    .card-subtitle {
-      font-size: 1.1rem !important;
+    .card-subtitle h6{
+      font-size: 0.8rem !important;
       color: var(--dark-grey);
     }
     .card-icon {
@@ -75,7 +75,7 @@ const Wrapper = styled.article`
     }
     .card-title h5{
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: var(--dark-grey);
     }
   }
