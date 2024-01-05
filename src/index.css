@@ -321,9 +321,50 @@ a {
   gap: 2rem;
 }
 
+.about-team {
+  margin: 0 auto;
+  background-color: white;
+}
+
+.img-team {
+  position: relative;
+  height: 70vh;
+}
+
+.img-team::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100.1%;
+  background-color: white;
+  height: 15vh;
+  clip-path: polygon(100% 40%, -40% 110%, 100% 100%);
+}
+
+@media screen and (min-width: 753px) {
+  .img-team::before {
+    clip-path: polygon(100% 10%, -20% 100%, 100% 100%);
+  }
+
+  .team-section {
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+  }
+}
+
 @media screen and (min-width: 992px) {
+  .img-team::before {
+    clip-path: polygon(100% 0, -50% 130%, 100% 100%);
+  }
+  
   .card-section {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: unset;
+  }
+
+  .team-section {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap;
   }
 }

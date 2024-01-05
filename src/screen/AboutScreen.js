@@ -30,6 +30,22 @@ const AboutScreen = () => {
           </div>
         </div>
       </section>
+      <section className='about-team'>
+        <div className='img-team' style={{
+          background: `url(${teamImg})`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'
+        }}></div>
+        <h3 className='about-title mt-2'>IL NOSTRO TEAM</h3>
+        <div className='card-section team-section'>
+            {
+              teamCards.map(card => {
+                return <Card key={card.title} {...card} />
+              })
+            }
+          </div>
+      </section>
     </>
   )
 };
