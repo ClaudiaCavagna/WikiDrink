@@ -72,6 +72,22 @@ a {
   transform: translateX(25%);
 }
 
+.btn-pink {
+  background-color: var(--flickr-pink);
+  width: 10rem;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+}
+
+.btn-pink:hover {
+  background-color: var(--flickr-pink);
+  color: white;
+  transform: scale(1.02);
+}
+
 /* NAV STYLE */
 .nav {
   display: flex;
@@ -367,4 +383,244 @@ a {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     flex-wrap: wrap;
   }
+}
+
+/* CONTACT HERO */
+.contact-hero {
+  display: grid;
+  height: 100%;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.contact-hero-text {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.contact-hero-title {
+  padding-inline: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-hero-title h2 {
+  color: var(--extra-dark-gray);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.contact-hero-title h4 {
+  color: var(--soft-dark-gray);
+  font-size: 0.9rem;
+  padding-inline: 1.5rem;
+}
+
+.contact-form-container {
+  margin-top: 2rem;
+  display: grid;
+  background-color: white;
+  box-shadow: var(--light-shadow);
+  border-radius: 6px;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  padding-inline: 0.6rem;
+  margin-inline: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  padding-inline: 1rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.form-group label {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--trypan-blue-2);
+}
+
+.form-group .input {
+  border: 1px solid transparent;
+  letter-spacing: var(--letter-spacing);
+}
+
+.contact-form button {
+  justify-self: center;
+  align-self: center;
+  margin-top: 1.2rem;
+  box-shadow: var(--light-shadow);
+}
+
+@media screen and (min-width: 992px) {
+  .contact-hero {
+    margin-top: 4.5rem;
+  }
+
+  .contact-hero-title {
+      width: 60%;
+  }
+
+  .contact-hero-title h4 {
+    font-size: 1.2rem;
+  }
+  
+  .contact-form-container {
+    place-self: center;
+    width: 70%;
+    padding: 2rem;
+    padding-block: 3rem;
+    margin-top: 3rem
+  }
+}
+
+/* HOME HERO STYLE */
+.home-hero {
+  display: grid;
+  height: 100%;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.home-hero-text {
+  display: grid;
+  width: 100%;
+  place-items: center;
+  text-align: center;
+  gap: 2rem;
+  color: var(--text-color);
+}
+
+.home-hero-title {
+  display: grid;
+  gap: 1.3rem;
+}
+
+.home-hero-title h2 {
+  color: var(--flickr-pink);
+  font-weight: 700;
+  font-size: 2.3rem;
+}
+
+.home-hero-title h4 {
+  font-variant: small-caps;
+  font-size: 0.8rem;
+  padding-inline: 2rem;
+  font-weight: 600;
+}
+
+.home-hero-title p {
+  align-self: center;
+  color: var(--light-gray);
+  max-width: 70ch;
+  line-height: 1.6;
+}
+
+.home-hero-title p span {
+  color: var(--flickr-pink);
+  font-size: 1rem;
+}
+
+.home-hero-text .btn {
+  justify-self: center;
+  align-self: center;
+  border-radius: 22px;
+  box-shadow: var(--light-shadow);
+}
+
+@media screen and (min-width: 992px) {
+  .home-hero {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-hero-text {
+    text-align: start;
+  }
+
+  .home-hero-title {
+    gap: 0.5rem;
+  }
+
+  .home-hero-title h2 {
+    font-size: 2.6rem;
+  }
+
+  .home-hero-title h4 {
+    padding-inline: 0;
+    font-size: 1.2rem;
+  }
+
+  .home-hero-title p {
+    margin-top: 2rem;
+    font-size: 105%;
+  }
+
+  .home-hero-text .btn {
+    justify-self: start;
+    margin-top: 2rem;
+  }
+
+  .home-hero-img {
+    margin-left: 10rem;
+  }
+}
+
+/* HOMESCREEN STYLE */
+.home-screen {
+  margin: 2rem auto;
+}
+
+.search-container {
+  margin: 2rem;
+}
+.form-container {
+  display: grid;
+  justify-content: center;
+}
+
+.form-container form {
+  display: grid;
+}
+
+.form-container form label h4{
+  color: var(--trypan-blue-2);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.search-bar input {
+  border: 1px solid var(--primary-gray);
+  border-radius: 22px;
+  padding-block: 0.3rem;
+  padding-inline: 1rem;
+}
+
+.search-bar button {
+  padding: 5px 8px;
+  margin-left: 1rem;
+  margin-bottom: 0.3rem;
+}
+.search-bar button .icon{
+  color: var(--flickr-pink);
+  font-size: 1.2rem;
+}
+
+.search-bar button:hover {
+  transform: scale(1.08);
+}
+
+.result {
+  color: var(--dark-gray);
+  font-size: 0.9rem;
 }
