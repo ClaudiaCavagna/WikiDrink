@@ -3,8 +3,11 @@ import { Hero, Card } from "../components";
 import { valueCards, teamCards } from "../utils/info";
 import image from "../assets/images/about-hero.jpg";
 import teamImg from "../assets/images/team-img.jpg";
+import useTitle from "../useTitle";
 
 const AboutScreen = () => {
+  useTitle('About');
+  
   return (
     <>
       <Hero img={image}>
