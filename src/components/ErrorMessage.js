@@ -10,7 +10,6 @@ const ErrorMessage = ({children}) => {
 }
 
 const Wrapper = styled.div`
-  justify-self: flex-start;
   margin: 2rem 0;
   background-color: rgba(255, 10, 84, 0.2);
   color: rgba(255, 10, 84, 0.8);
@@ -19,6 +18,7 @@ const Wrapper = styled.div`
   border-radius: 0.35rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   h4 {
     text-transform: lowercase;
     font-variant: small-caps;

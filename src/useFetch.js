@@ -4,11 +4,12 @@ const searchUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?';
 const singleUrl = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?';
 
 const useFetch = (query, type = false) => {
-    const url = type ? singleUrl : searchUrl;
+    
     const [isLoading, setIsLoading] = useState(true);
     const [data, setData] = useState([]);
     const [count, setCount] = useState(0);
     const [isError, setIsError] = useState(false);
+    const url = type ? singleUrl : searchUrl;
 
     useEffect(() => {
         (async(query)=> {
@@ -25,7 +26,7 @@ const useFetch = (query, type = false) => {
             }
             setIsLoading(false);
         })(query)
-    }, [url, query])
+    }, [query, url])
 
     return {isLoading, data, isError, count};
 };

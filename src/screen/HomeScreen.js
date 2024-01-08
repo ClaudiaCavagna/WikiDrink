@@ -5,6 +5,7 @@ import Lottie from "react-lottie";
 import animationData from "../assets/animation/drink-animation.json";
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context";
+
 const HomeScreen = () => {
   const {query, isLoading, data, isError, count, searchCocktail, deleteScrollPosition, scrollPosition} = useGlobalContext();
   const [input, setInput] = useState(query);
@@ -27,10 +28,10 @@ const HomeScreen = () => {
       <div className="home-hero-text">
         <div className="home-hero-title">
           <h2>WIKI DRINK</h2>
-          <h4>Tutti i cocktail del mondo a portata di click</h4>
-          <p>Wiki Drink è un database internazionale che mette a tua disposizione, in maniera <span>Gratuita</span>, le ricette dei più importanti e diffusi cocktail al mondo.</p>
+          <h4>Every cocktail in the world just a click away</h4>
+          <p>Wiki Drink is an international database that provides you, <span>free of charge</span>, with the recipes of the most important and popular cocktails around the world</p>
           <Link to='/about' className='btn btn-pink'>
-            Scopri di più
+            Learn more
           </Link>
         </div>
       </div>
@@ -55,7 +56,7 @@ const HomeScreen = () => {
       <div className="form-container">
         <form onSubmit={handleSubmit}>
           <label htmlFor="drink">
-            <h4>Cerca il tuo drink</h4>
+            <h4>Search your drink</h4>
           </label>
           <div className="search-bar">
             <input id="drink" className="input"
@@ -69,17 +70,15 @@ const HomeScreen = () => {
           </div>
         </form>
       </div>
-      <p className="result">{count} risultati</p>
+      <p className="result">{count} results</p>
     </div>
-    {
-      !isLoading && isError ? (
-      <ErrorMessage>Nessun cocktail trovato</ErrorMessage>
+    { !isLoading && isError ? (
+      <ErrorMessage>No cocktail found</ErrorMessage>
       ) : !isLoading && !isError ? (
       <Cocktails data={data.drinks} className="center-cocktail" />
       ) : (
       <Loading />
-      )
-    }
+      )}
   </section>
   </>;
 };

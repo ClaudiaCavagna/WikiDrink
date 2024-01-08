@@ -36,14 +36,14 @@ const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name }) => {
       <div className={ show ? `card-text show-info` : "card-text" } >
         <h5>{name}</h5>
         <div className='see-more-btn' onClick={() => goToCocktail(_id)} >
-          <h5>Ricetta</h5>
+          <h5>Recipe</h5>
           <HiClipboardList className='icon ' />
         </div>
       </div>
       <div className='card-text-sm container'>
         <h5>{name}</h5>
         <div className='see-more-btn' onClick={() => goToCocktail(_id)} >
-          <h5>Ricetta</h5>
+          <h5>Recipe</h5>
           <HiClipboardList className='icon ' />
         </div>
       </div>
@@ -120,6 +120,7 @@ const Wrapper = styled.article`
       color: var(--text-color);
       transition: var(--transition);
       display: flex !important;
+      padding-inline: 1rem;
     }
 
     .card-text h5 {

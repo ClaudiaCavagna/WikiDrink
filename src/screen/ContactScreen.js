@@ -8,10 +8,10 @@ const ContactScreen = () => {
         <div className="contact-hero-text">
           <div className="contact-hero-title">
             <h2>
-              Vorresti aggiungere un cocktail?
+              Would you like to add a cocktail?
             </h2>
             <h4>
-              Il nostro team è sempre disponibile per valutare possibili nuove ricette ed ad aggiungerle alla nostro database
+              Our team is always available to evaluate possible new recipes and add them to our database
             </h4>
           </div>
         </div>
@@ -22,12 +22,12 @@ const ContactScreen = () => {
             className="contact-form"
           >
             <div className="form-group">
-              <label htmlFor="name">Nome</label>
+              <label htmlFor="name">Name</label>
               <input type="text" id="name" name="name" className="input" placeholder="Daniele" />
               <hr/>
             </div>
             <div className="form-group">
-              <label htmlFor="surname">Cognome</label>
+              <label htmlFor="surname">Surname</label>
               <input type="text" id="surname" name="surname" className="input" placeholder="Tamarindo" />
               <hr />
             </div>
@@ -37,15 +37,15 @@ const ContactScreen = () => {
               <hr />
             </div>
             <div className="form-group">
-              <label htmlFor="phone">Telefono</label>
+              <label htmlFor="phone">Phone</label>
               <input type="cel" id="phone" name="phone" className="input" placeholder="555 555 5555" />
               <hr />
             </div>
             <div className="form-group">
-              <label htmlFor="recipe">Ricetta</label>
-              <input type="textarea" id="recipe" name="recipe" className="input textarea" placeholder="Scrivi la tua ricetta qui..." />
+              <label htmlFor="recipe">Recipe</label>
+              <input type="textarea" id="recipe" name="recipe" className="input textarea" placeholder="Write your recipe here..." />
             </div>
-            <button className="btn btn-pink">Invia ricetta</button>
+            <button className="btn btn-pink">Send recipe</button>
           </form>
         </div>
       </div>

@@ -12,7 +12,7 @@ const AboutScreen = () => {
           <div className='about-text'>
             <div className='topline'></div>
             <h3>
-              <q>Grande è la fortuna di colui che possiede una buona bottiglia, un buon libro, un buon amico</q>
+              <q>Great is the fortune of the one who has a good bottle, a good book, and a good friend</q>
             </h3>
             <div className='underline'></div>
           </div>
@@ -20,7 +20,7 @@ const AboutScreen = () => {
       </Hero>
       <section className='about-value'>
         <div className=' about-value-content'>
-          <h3 className='about-title'>IL NOSTRO PROGETTO</h3>
+          <h3 className='about-title'>OUR PROJECT</h3>
           <div className='card-section'>
             {
               valueCards.map(card => {
@@ -37,7 +37,7 @@ const AboutScreen = () => {
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover'
         }}></div>
-        <h3 className='about-title mt-2'>IL NOSTRO TEAM</h3>
+        <h3 className='about-title mt-2'>OUR TEAM</h3>
         <div className='card-section team-section'>
             {
               teamCards.map(card => {
