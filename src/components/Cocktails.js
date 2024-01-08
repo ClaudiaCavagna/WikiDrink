@@ -1,11 +1,33 @@
-import React from 'react'
+import React from "react";
+import Coktail from "./Cocktail";
+import styled from "styled-components";
 
-const Cocktails = () => {
+const Cocktails = ({ data }) => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <Wrapper>
+      {data.map((el) => {
+        return <Coktail key={el.idDrink} {...el} />;
+      })}
+    </Wrapper>
+  );
+};
 
-export default Cocktails
+const Wrapper = styled.section`
+  margin-top: 3rem;
+  margin-inline: 1rem;
+  min-height: 20vh;
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+  @media screen and (min-width: 753px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (min-width: 992px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media screen and (min-width: 1280px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+`;
+
+export default Cocktails;
