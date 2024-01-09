@@ -21,10 +21,10 @@ const SingleCocktailScreen = () => {
   if(isError) {
     return (
       <Wrapper>
-        <div className='back-section'>
+        <div className='back-section-err'>
           <header>
             <Link to='/'>
-              <IoArrowBackCircleSharp className='back-icon' />
+              <IoArrowBackCircleSharp className='back-icon-err' />
             </Link>
           </header>
           <ErrorMessage>
@@ -125,7 +125,7 @@ const Wrapper = styled.section`
   min-height: 96vh;
   padding-bottom: 4rem;
   hr {
-    width: 90%;
+    width: 100%;
     place-self: center;
     border-bottom: 1px solid var(--divider-color);
   }
@@ -143,9 +143,13 @@ const Wrapper = styled.section`
     font-size: 0.8rem;
     color: var(--dark-gray)
   }
-  .back-section {
+  .back-section-err {
     text-align: center;
     margin-top: 3rem;
+  }
+  .back-section {
+    text-align: center;
+    margin-top: 1.5rem;
   }
   .back-section header {
     display: flex;
@@ -153,21 +157,27 @@ const Wrapper = styled.section`
     gap: 1rem;
   }
   .back-text {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     color: var(--soft-dark-gray);
-    margin-top: 0.8rem;
+    margin-top: 0.4rem;
   }
-  .back-icon {
+  .back-icon-err {
     font-size: 3rem;
     color: var(--flickr-pink);
   }
-  .back-icon:hover {
-    transform: scale(1.03)
+  .back-icon:hover, .back-icon-err:hover {
+    transform: scale(1.03);
+    color: var(--byzantine);
+  }
+  .back-icon {
+    font-size: 1.5rem;
+    color: var(--flickr-pink);
   }
   .cocktail-container {
     display: grid;
     margin: 2rem;
+    margin-top: 1rem;
   }
   .cocktail-img {
     width: 100%;
@@ -195,9 +205,7 @@ const Wrapper = styled.section`
     text-align: start;
   }
   @media screen and (min-width: 992px) {
-    hr {
-      width: 100%;
-    }
+  
     .cocktail-container {
       display: flex;
       margin-top: 3rem;

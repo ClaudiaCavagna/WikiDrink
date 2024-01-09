@@ -38,7 +38,7 @@ const HomeScreen = () => {
         </div>
       </div>
       <div className="home-hero-img">
-        <Lottie 
+        <Lottie className='animation'
           options={{
             loop: true,
             autoplay: true,
@@ -48,7 +48,7 @@ const HomeScreen = () => {
               preserveAspectRatio: 'xMidYMid slice',
             }
           }}
-          height={350}
+          height={300}
         />
       </div>
     </div>

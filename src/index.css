@@ -537,6 +537,19 @@ a {
   box-shadow: var(--light-shadow);
 }
 
+.home-hero-img {
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 450px) {
+  .home-hero-img {
+    padding: 0;
+    padding-bottom: 1rem;
+    width: 50%;
+    place-self: center;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .home-hero {
     grid-template-columns: 1fr 1fr;
@@ -604,11 +617,12 @@ a {
   border-radius: 22px;
   padding-block: 0.3rem;
   padding-inline: 1rem;
+  width: 13rem;
 }
 
 .search-bar button {
   padding: 5px 8px;
-  margin-left: 1rem;
+  margin-left: 0.7rem;
   margin-bottom: 0.3rem;
 }
 .search-bar button .icon{

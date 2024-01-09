@@ -23,7 +23,7 @@ const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name }) => {
   };
 
   return (
-    <Wrapper onMouseEnter={showInfo} onMouseLeave={hideInfo}>
+    <Wrapper onMouseEnter={showInfo} onMouseLeave={hideInfo} onClick={() => goToCocktail(_id)}>
       <div
         className='img'
         style={{
@@ -35,17 +35,9 @@ const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name }) => {
       />
       <div className={ show ? `card-text show-info` : "card-text" } >
         <h5>{name}</h5>
-        <div className='see-more-btn' onClick={() => goToCocktail(_id)} >
-          <h5>Recipe</h5>
-          <HiClipboardList className='icon ' />
-        </div>
       </div>
-      <div className='card-text-sm container'>
+      <div className='card-text-sm'>
         <h5>{name}</h5>
-        <div className='see-more-btn' onClick={() => goToCocktail(_id)} >
-          <h5>Recipe</h5>
-          <HiClipboardList className='icon ' />
-        </div>
       </div>
     </Wrapper>
   );
@@ -76,6 +68,7 @@ const Wrapper = styled.article`
   .card-text-sm {
     justify-content: space-between;
     align-items: center;
+    justify-content: center;
   }
 
   .card-text-sm h5 {
@@ -91,7 +84,7 @@ const Wrapper = styled.article`
   .card-text {
     display: none;
   }
-
+/* 
   .see-more-btn {
     display: flex;
     align-items: center;
@@ -103,7 +96,7 @@ const Wrapper = styled.article`
   .see-more-btn:hover svg,
   .see-more-btn:hover h5 {
     color: var(--byzantine);
-  }
+  } */
 
   @media screen and (min-width: 992px) {
     width: 100%;

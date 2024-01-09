@@ -19,7 +19,6 @@ const useFetch = (query, type = false) => {
                 const response = await axios.get(`${url}${query}`);
                 setData(response.data);
                 setCount(response.data.drinks.length);
-                console.log(response.data);
             } catch (err) {
                 setIsError(true);
                 setCount(0);
