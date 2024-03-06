@@ -36,18 +36,7 @@ const Wrapper = styled.article`
   border-radius: 6px;
   background-color: white;
   transition: var(--transition);
-  &.value-card:hover {
-    cursor: pointer;
-    transform: scale(1.03);
-    background-color: var(--trypan-blue-2);
-    .card-title {
-      color: white;
-      font-size: 1.2rem;
-    }
-    .card-text p {
-      color: var(--extra-light-gray);
-    }
-  }
+  
   .card-container {
     display: grid;
     place-items: center;
